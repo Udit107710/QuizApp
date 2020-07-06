@@ -6,7 +6,8 @@ class Question(models.Model):
 
 class Answer(models.Model):
     option = models.CharField(max_length=30)
-
-class QuestionAnswer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
+
+# class QuestionAnswer(models.Model):
+#     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+#     answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
